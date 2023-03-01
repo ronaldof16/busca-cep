@@ -1,8 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(270, 20%, 96%);
+
+}
+
 main {
     display: flex;
-    background-color: hsl(0, 0%, 100%)
+}
+
+.background-com-tela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background-destaque {
-    background-color: ;
+    background-color: hsl(293, 100%, 63%);
+    width: 35vw;
+    height: 80vh;
+    border-radius: 0 0 40% 5%;  
+}
+
+.tela-do-app {
+    background-color: hsl(0, 0%, 100%);
+    width: 20vw;
+    height: 60vh;
+    border-radius: 10%;
+    
 }
