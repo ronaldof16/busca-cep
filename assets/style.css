@@ -33,6 +33,25 @@ main {
     
 }
 
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: hsl(271, 36%, 24%);
+}
+
+.texto p {
+    font-size: 1.3rem;
+    color: hsl(270, 7%, 64%);
+}
+
 footer {
     text-align: center;
 }
