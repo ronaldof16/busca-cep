@@ -45,14 +45,15 @@ main {
 
 h2 {
     font-size: 2.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     color: hsl(271, 36%, 24%);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .texto p {
-    font-size: rem;
+    font-size: 1.1rem;
     color: hsl(270, 7%, 64%);
+    line-height: 1.7rem;
 }
 
 footer {
