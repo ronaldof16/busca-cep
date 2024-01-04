@@ -4,15 +4,17 @@ import './Style.css'
 
 const Buscador = () => {
     const [input, setInput] = useState('');
+    const [cep, setCep] = useState({});
 
     function handleChange(e) {
         setInput(e.target.value);
     }
 
     async function buscaCep() {
-        const resposta = await fetch(`https://viacep.com.br/ws/55814080/json/`);
-        console.log(resposta)
-        
+        const resposta = await fetch(`https://viacep.com.br/ws/${input}/json`)
+        .then(r => r.json());
+        setCep(resposta);
+        console.log(cep);
     }
 
 
@@ -24,11 +26,12 @@ const Buscador = () => {
                 <button className='btn' onClick={buscaCep}>Buscar</button>
             </div>
             <div className='resultado'>
-                <h2>CEP: </h2>
-                <span>Rua:</span>
-                <span>Complemento:</span>
-                <span>Bairro:</span>
-                <span>Cidade:</span>
+                <h2>CEP: {cep.cep} </h2>
+                <span>Rua: {cep.logradouro}</span>
+                <span>Complemento: {cep.complemento}</span>
+                <span>Bairro: {cep.bairro}</span>
+                <span>Cidade: {cep.localidade}</span>
+                <span>Estado: {cep.uf}</span>
             </div>
         </div>
     )
