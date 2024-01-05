@@ -20,9 +20,10 @@ const Buscador = () => {
         try {
             await fetch(`https://viacep.com.br/ws/${input}/json`)
             .then(r => r.json())
-            .then(r => setCep(r))
+            .then(r => setCep(r));
+            setInput('');
         } catch {
-            alert('Ocorreu um erro, digite o CEP novamente!')
+            alert('Ocorreu um erro, digite o CEP novamente!');
             setInput('');
         }
         
