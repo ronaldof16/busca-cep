@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-import './Style.css'
+import './Style.css';
 
 const Buscador = () => {
     const [input, setInput] = useState('');
@@ -11,10 +11,21 @@ const Buscador = () => {
     }
 
     async function buscaCep() {
-        const resposta = await fetch(`https://viacep.com.br/ws/${input}/json`)
-        .then(r => r.json());
-        setCep(resposta);
-        console.log(cep);
+        if(input === '') {
+            alert('Digite um CEP!');
+            setInput('');
+            return;
+        }
+
+        try {
+            await fetch(`https://viacep.com.br/ws/${input}/json`)
+            .then(r => r.json())
+            .then(r => setCep(r))
+        } catch {
+            alert('Ocorreu um erro, digite o CEP novamente!')
+            setInput('');
+        }
+        
     }
 
 
@@ -25,14 +36,19 @@ const Buscador = () => {
                 <input className='input-cep' type='text' value={input} onChange={handleChange} placeholder='Digite o CEP'/>
                 <button className='btn' onClick={buscaCep}>Buscar</button>
             </div>
-            <div className='resultado'>
-                <h2>CEP: {cep.cep} </h2>
-                <span>Rua: {cep.logradouro}</span>
-                <span>Complemento: {cep.complemento}</span>
-                <span>Bairro: {cep.bairro}</span>
-                <span>Cidade: {cep.localidade}</span>
-                <span>Estado: {cep.uf}</span>
-            </div>
+
+            {Object.keys(cep).length > 0 && 
+                <div className='resultado'>
+                    <h2>CEP: {cep.cep} </h2>
+                    <span>{cep.logradouro}</span>
+                    {cep.complemento &&
+                    <span>Complemento: {cep.complemento}</span>
+                    }
+                    <span>Bairro: {cep.bairro}</span>
+                    <span>Cidade: {cep.localidade}</span>
+                    <span>Estado: {cep.uf}</span>
+                </div>
+            }
         </div>
     )
 }
