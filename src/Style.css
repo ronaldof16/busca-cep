@@ -27,6 +27,7 @@
     border: 2px #041420 solid;
     font-size: 1rem;
     color: #041420;
+    font-family: monospace;
 }
 
 .input-cep:focus {
@@ -43,11 +44,11 @@
     transition: 1.5;
     background: #041420;
     border: none;
+    font-family: monospace;
 }
 
 .btn:hover {
-    background: #273845;
-    
+    background: #273845;   
 }
 
 .resultado {
@@ -68,4 +69,31 @@
 .resultado span {
     margin-bottom: 0.25rem;
     font-size: 1.25rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    color: #041420;
+}
+
+footer a {
+    text-decoration: none;
+    color: #0a2ebd;
+}
+
+@media (max-width: 380px) {
+    .titulo {
+        font-size: 3rem;
+    }
+
+    .container-input {
+        flex-direction: column;
+    }
+
+    .resultado {
+        min-width: 0px;
+        max-width: 80%;
+    }
 }
