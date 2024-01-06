@@ -50,6 +50,10 @@ const Buscador = () => {
                     <span>Estado: {cep.uf}</span>
                 </div>
             }
+
+            <footer>
+                <p>&copy; Desenvolvido por <a href='https://github.com/ronaldof16'>Ronaldo Fernando</a></p>
+            </footer>
         </div>
     )
 }
