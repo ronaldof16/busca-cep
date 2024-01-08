@@ -2,7 +2,7 @@
 
 Link da página: <https://busca-cep-orcin-one.vercel.app>
 
-![design do projeto]()
+![design do projeto](./src/img-projeto.png)
 
 ## Sobre
 
@@ -10,12 +10,12 @@ Este projeto é uma aplicação onde o usuário vai poder digitar um CEP e ao cl
 
 ## Objetivos
 
-O objetivo deste projeto é colocar em prática os conhecimentos adquiridos até o momento, nesse site pude consumir uma API, trabalhar com o hook useState, além de utilizar objetos e renderização condicional. Projeto bem legal e de grande utilidade para os usuários.
+O objetivo deste projeto é colocar em prática os conhecimentos adquiridos até o momento, esse site é o primeiro que eu fiz utilizando o react.js, nele foi possível consumir uma api com o fetch e também trabalhar com o hook useState, além de utilizar objetos e renderização condicional. Projeto bem legal e de grande utilidade para os usuários.
 
 ## Competências utilizadas
 
 * HTML
 * CSS
 * JAVASCRIPT
-* REACT
+* REACT.JS
 
