@@ -83,11 +83,7 @@ footer a {
     color: #0a2ebd;
 }
 
-@media (max-width: 380px) {
-    .titulo {
-        font-size: 3rem;
-    }
-
+@media (max-width: 500px) {
     .container-input {
         flex-direction: column;
     }
@@ -95,5 +91,6 @@ footer a {
     .resultado {
         min-width: 0px;
         max-width: 80%;
+        margin-bottom: 1rem;
     }
 }
